@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+# bin/console
+
+require_relative "../lib/sandbox"
+
+require "irb"
+IRB.start
