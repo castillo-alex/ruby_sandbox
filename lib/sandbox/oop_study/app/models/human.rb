@@ -1,16 +1,17 @@
 # require_relative 'being'
 # require_relative 'communicate'
 # require_relative '../classes/voice'
+# 
+# require "forwardable"
 
 module OopStudy  
   class Human < Being
-    
     attr_reader :name
     
     def initialize(name:)
       super()
       @name = name
-      @ground_movement = Behaviors::GroundMovement.new(self)
+      @ground_movement = Behaviors::GroundMovement.new
       # @voice = Voice.new
     end
     
@@ -23,7 +24,7 @@ module OopStudy
     end
 
     def move
-      @ground_movement.move(movement_type: %w[walk fly].sample)
+      @ground_movement.move(being: self, movement_type: %w[walk run crawl].sample)
     end
   end
 end
