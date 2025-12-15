@@ -1,24 +1,25 @@
 # require_relative 'being'
 # require_relative 'communicate'
 # require_relative '../classes/voice'
-# 
+#
 # require "forwardable"
 
-module OopStudy  
+module OopStudy
+  # Description/Explanation of Class
   class Human < Being
     attr_reader :name
-    
+
     def initialize(name:)
       super()
       @name = name
       @ground_movement = Behaviors::GroundMovement.new
       # @voice = Voice.new
     end
-    
+
     def introduction
       speak("Hello, my name is #{name}.")
     end
-        
+
     def eye_color
       @eye_color ||= %w[black brown blue hazel green].sample
     end
@@ -28,4 +29,3 @@ module OopStudy
     end
   end
 end
-  
