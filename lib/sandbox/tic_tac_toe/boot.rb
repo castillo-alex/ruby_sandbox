@@ -4,4 +4,5 @@
 module TicTacToe
 end
 
-require_relative 'app/game_board'
+require_relative 'app/game'
+require_relative 'app/player'
