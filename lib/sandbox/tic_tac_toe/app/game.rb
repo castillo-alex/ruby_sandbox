@@ -4,7 +4,7 @@ require 'pry-byebug'
 module TicTacToe
   # Describe Game
   class Game
-    private attr_accessor :tile, :game_board
+    private attr_accessor :game_board
 
     def initialize
       @game_board = Array.new(3) { Array.new([true, true, true]) }
