@@ -3,10 +3,13 @@
 module TicTacToe
   # Describe Game
   class Game
+    attr_reader :player_x, :player_o
     private attr_reader :game_board
 
     def initialize
       @game_board = Array.new(3) { Array.new([true, true, true]) }
+      @player_x = TicTacToe::PlayerX.new(game: self)
+      @player_o = TicTacToe::PlayerO.new(game: self)
     end
 
     def print_game_board
