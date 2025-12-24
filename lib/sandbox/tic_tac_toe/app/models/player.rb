@@ -3,7 +3,7 @@
 module TicTacToe
   # Describe Player
   class Player
-    private attr_reader :game, :mark, :player_number
+    attr_reader :game, :mark, :player_number
 
     def initialize(game:, mark:, player_number:)
       @game = game
