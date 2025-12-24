@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'pry-byebug'
 module TicTacToe
   # Describe Game
   class Game
@@ -46,5 +45,3 @@ module TicTacToe
     end
   end
 end
-
-binding.pry
