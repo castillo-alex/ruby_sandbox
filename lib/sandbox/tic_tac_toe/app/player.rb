@@ -12,8 +12,6 @@ module TicTacToe
     end
 
     def write_to_board(game:, mark:, row:, col:)
-      return 'Cannot write to this tile' unless game.tile_writable?(row:, col:)
-
       game.mark_tile(row:, col:, mark:)
     end
   end
