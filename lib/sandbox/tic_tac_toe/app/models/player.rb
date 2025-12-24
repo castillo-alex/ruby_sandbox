@@ -11,8 +11,8 @@ module TicTacToe
       @player_number = player_number
     end
 
-    def write_to_board(game:, mark:, row:, col:)
-      game.mark_tile(row:, col:, mark:)
-    end
+    # def write_to_board(game:, mark:, row:, col:)
+    #   game.mark_tile(row:, col:, mark:)
+    # end
   end
 end
