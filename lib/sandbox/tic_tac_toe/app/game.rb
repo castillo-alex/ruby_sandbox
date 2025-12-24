@@ -4,7 +4,7 @@ require 'pry-byebug'
 module TicTacToe
   # Describe Game
   class Game
-    private attr_accessor :game_board
+    private attr_reader :game_board
 
     def initialize
       @game_board = Array.new(3) { Array.new([true, true, true]) }
@@ -19,8 +19,14 @@ module TicTacToe
 
     def tile_writable?(row:, col:)
       # dig avoids throwing NoMethodError when first array passed does not exist
-      tile_mark = game_board.dig(row, col)
-      tile_mark == true
+      writable = game_board.dig(row, col)
+      writable == true
+    end
+
+    def mark_tile(row:, col:, mark:)
+      return 'Cannot write to that tile' unless tile_writable?(row:, col:)
+
+      game_board[row][col] = mark
     end
 
     private
