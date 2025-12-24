@@ -11,7 +11,7 @@ module TicTacToe
     end
 
     def write_to_board(row:, col:)
-      game.mark_tile(row:, col:, mark:)
+      game.mark_tile row:, col:, mark:
     end
   end
 end

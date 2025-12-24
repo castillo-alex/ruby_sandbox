@@ -4,7 +4,7 @@ module TicTacToe
   # Describe PlayerX class
   class PlayerX < Player
     def initialize(game:)
-      super(game:, mark: 'X')
+      super game:, mark: 'X'
     end
   end
 end
