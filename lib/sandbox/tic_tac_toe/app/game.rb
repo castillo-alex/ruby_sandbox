@@ -26,9 +26,10 @@ module TicTacToe
     end
 
     def mark_tile(row:, col:, mark:)
-      return 'Cannot write to that tile' unless tile_writable?(row:, col:)
+      return false unless tile_writable?(row:, col:)
 
       game_board[row][col] = mark
+      true
     end
 
     private
